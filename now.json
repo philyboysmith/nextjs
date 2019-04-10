@@ -1,1 +1,16 @@
-{"version":2,"name":"nextjs","builds":[{"src":"package.json","use":"@now/next"}]}
+{
+    "version": 2,
+    "name": "cultbox",
+    "env": {
+        "NODE_ENV": "production"
+    },
+    "routes": [
+        { "src": "/(.*)$", "dest": "/$1" }
+    ],
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/next"
+        }
+    ]
+}
